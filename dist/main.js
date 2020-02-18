@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/main.ts":
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub */ \"./src/sub.js\");\n// import 文を使って sub.js ファイルを読み込む。\n\n\n// sub.jsに定義されたJavaScriptを実行する。\nObject(_sub__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub */ \"./src/sub.ts\");\n\nvar message = 'Hello World';\n// sub.jsに定義されたJavaScriptを実行する。\nObject(_sub__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])(message);\n\n\n//# sourceURL=webpack:///./src/main.ts?");
 
 /***/ }),
 
-/***/ "./src/sub.js":
+/***/ "./src/sub.ts":
 /*!********************!*\
-  !*** ./src/sub.js ***!
+  !*** ./src/sub.ts ***!
   \********************/
-/*! exports provided: hello */
+/*! exports provided: hello, piyo */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\n// export文を使ってhello関数を定義する。\nfunction hello() {\n    alert(\"helloメソッドが実行された。5\");\n}\n\n//# sourceURL=webpack:///./src/sub.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"piyo\", function() { return piyo; });\n// module.exportを使ってhello関数を定義する。\nvar hello = function (message) {\n    log(message);\n};\nfunction log(message) {\n    document.body.innerHTML = (\"\" + message);\n    console.log(message + \"\\u3092\\u51FA\\u529B\\u3057\\u307E\\u3057\\u305F\");\n}\nfunction piyo() {\n}\n\n\n//# sourceURL=webpack:///./src/sub.ts?");
 
 /***/ })
 
