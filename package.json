@@ -5,6 +5,7 @@
     "watch": "webpack --config webpack.dev.js --watch"
   },
   "devDependencies": {
+    "minimist": "^1.2.5",
     "ts-loader": "^6.2.2",
     "typescript": "^3.9.9",
     "webpack": "^4.46.0",
